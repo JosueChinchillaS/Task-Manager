@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="../public/css/style.css" />
+
+    <title>Josué Chinchilla</title>
+  </head>
+  <body>
+    <section class="main">
+      <section class="menu">
+        <div class="account">
+          <div class="img">
+            <ion-icon name="person-outline"></ion-icon>
+          </div>
+          <div class="profile">
+            <h2>Josué Chinchilla</h2>
+          </div>
+        </div>
+
+        <div class="navigation">
+          <div class="dashboard">
+            <a href="">
+              <ion-icon name="terminal-outline"></ion-icon>
+              Dashboard
+            </a>
+          </div>
+          <div class="settings">
+            <a href="">
+              <ion-icon name="settings-outline"></ion-icon>
+              Settings
+            </a>
+          </div>
+          <div class="activity">
+            <a href="">
+              <ion-icon name="planet-outline"></ion-icon>
+              All Activity
+            </a>
+          </div>
+        </div>
+        <div class="navigation-menu">
+          <ul>
+            <li class="list">
+              <a href="" class="link active">
+                <span> <ion-icon name="checkmark-outline"></ion-icon> </span>
+                <span>Daily Task</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="" class="link">
+                <span><ion-icon name="layers-outline"></ion-icon></span>
+                <span>Meetings Summary</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="" class="link">
+                <span><ion-icon name="copy-outline"></ion-icon></span>
+                <span>Resources</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="" class="link">
+                <span><ion-icon name="alarm-outline"></ion-icon></span>
+                <span>Availability</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="" class="link">
+                <span><ion-icon name="code-outline"></ion-icon></span>
+                <span>All Projects</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="" class="link">
+                <span><ion-icon name="archive-outline"></ion-icon></span>
+                <span>Archive</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="" class="link">
+                <span><ion-icon name="git-branch-outline"></ion-icon></span>
+                <span>Brainstorming</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="new-task">
+          <button class="new-task__btn">
+            <span><ion-icon name="add-outline"></ion-icon></span> New task
+          </button>
+        </div>
+      </section>
+
+      <section class="tasks">
+        <div class="title">
+          <ion-icon name="checkmark-outline"></ion-icon>
+          <h1>Daily Tasks</h1>
+        </div>
+        <div class="text">
+          <p>
+            Click <span>+ New</span> To create new list and wait for task
+            manager card
+          </p>
+          <p>Do drag and drop to change the status of the task</p>
+        </div>
+
+        <div id="tasks-section">
+          <div class="column nextup">
+            <div class="column-header">
+              <h3>Next Up</h3>
+            </div>
+
+            <div class="cells-container">
+              <div class="cell">
+                <!-- JavaScript -->
+                <div id="cell-main" draggable="true"></div>
+                <!-- JavaScript -->
+              </div>
+
+              <div class="cell"></div>
+              <div class="cell"></div>
+            </div>
+
+            <div class="add-task" id="btn-add">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="column inprogress">
+            <div class="column-header">
+              <h3>In Progress</h3>
+            </div>
+
+            <div class="cells-container">
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+            </div>
+
+            <div class="add-task" id="btn-add">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="column-header">
+              <h3>Completed</h3>
+            </div>
+
+            <div class="cells-container">
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+            </div>
+
+            <div class="add-task" id="btn-add">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="members">
+          <h2>Member (25)</h2>
+          <a href="" class="view-all">View All</a>
+        </div>
+
+
+        <div class="chat-header">
+          <h2>Group Chat</h2>
+        </div>
+        <div class="chat-main">
+          <div class="name">
+            <!-- <span><ion-icon name="person-outline"></ion-icon></span>
+            <input type="text" name="" id="name-input" class="name-input" value="anonymous" > -->
+          </div>
+          <ul class="message-container" id="message-container">
+            <li class="message-left">
+              <p class="message">
+                Lorem ipsum d 😇  
+              </p>
+              <span>07:00 AM</span>
+            </li>
+
+            <li class="message-right">
+              <p class="message">
+                Lorem ipsum d 🔥 
+              </p>
+                              <span>07:30 AM </span>
+
+            </li>
+
+
+            <li class="message-feedback">
+              <p class="feedback" id="feedback">
+                Someone is typing...
+              </p>
+            </li>
+          </ul>
+
+          <form class="message-form" id="message-form">
+            <input type="text" name="message" id="message-input" class="message-input" placeholder="Write here...">
+            <div class="v-divider"></div>
+            <button type="submit" class="send-button">
+              <span><ion-icon name="send-outline"></ion-icon></span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <section id="add-task">
+      <div id="popup">
+        <div class="container">
+          <div class="banner">
+            <img src="../img/illustration.png" alt="" />
+          </div>
+
+          <div class="close-btn">&times;</div>
+
+          <div class="form">
+            <h2>Add Task</h2>
+            <form action="">
+              <div class="left">
+                <div class="name">
+                  <label for="taskName">Task Name</label>
+                  <input
+                    type="text"
+                    name="taskName"
+                    id="task-name"
+                    placeholder="Do the dishes"
+                    required
+                  />
+                </div>
+
+                <div class="date">
+                  <label for="taskDate">Task Date</label>
+                  <input type="date" name="taskDate" id="task-date" required />
+                </div>
+              </div>
+
+              <div class="right">
+                <div class="owner">
+                  <label for="taskOwner">Task Owner</label>
+                  <select required name="taskOwner" id="task-owner">
+                    <option value="">Select the owner</option>
+                    <option value="1">Josué Chinchilla</option>
+                  </select>
+                </div>
+
+                <div class="priority">
+                  <label for="taskPriority">Task Priority</label>
+                  <select class="prioritySelector" id="task-priority" required>
+                    <option value="">
+                      Select the priority
+                    </option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                  </select>
+                </div>
+              </div>
+              <div class="description">
+                <div class="textarea">
+                  <label for="taskDescription">Task Description</label>
+                  <textarea
+                    required
+                    name=""
+                    id="task-description"
+                    cols="30"
+                    rows=""
+                    placeholder="Write your description here..."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="btn">
+                <button id="add-task__btn">Add</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sweet Alert -->
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Axios -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- JavaScript -->
+
+    <script src="../public/js/servicio-general.js"></script>
+    <script src="../public/js/add-task.js"></script>
+    <script src="../public/js/index.js"></script>
+
+    <!-- <script>
+      function BgColor(value) {
+  document.getElementById("date").style.backgroundColor = value;
+}
+  </script> -->
+  </body>
+</html>

@@ -1,0 +1,598 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.main {
+  display: flex;
+  height: 100vh;
+}
+.main.active {
+  opacity: 13%;
+}
+
+/* Menu */
+.menu {
+  flex-basis: 20%;
+  background-color: #f4f5f7;
+  display: flex;
+  flex-direction: column;
+}
+.menu .account {
+  background-color: #fff;
+  width: 80%;
+  display: flex;
+  border-radius: 0.75rem;
+  height: 4rem;
+  margin: 60px 30px 40px;
+  align-items: center;
+  position: relative;
+  top: -7%;
+}
+
+.menu .account .img {
+  background-color: #2e4acd;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: 7%;
+  display: flex;
+  font-size: 1.6025rem;
+}
+.menu .account .img ion-icon {
+  color: white;
+  margin: auto;
+}
+.menu .account h2 {
+  font-size: 1rem;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  margin: -55px 50px;
+  font-size: 1.2rem;
+}
+.navigation div {
+  margin-bottom: 15px;
+}
+.navigation a {
+  text-decoration: none;
+  color: #b0b0b0;
+}
+
+.navigation a ion-icon {
+  font-size: 1.7rem;
+  margin-right: 15px;
+}
+
+.navigation-menu {
+  display: flex;
+  margin: auto;
+  position: relative;
+  top: 7%;
+}
+
+.navigation-menu li {
+  list-style: none;
+  margin-top: 20px;
+}
+.navigation-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.new-task {
+  display: flex;
+  margin: 30% 7%;
+}
+.new-task button {
+  padding: 15px 70px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #2e4acd;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+}
+
+.new-task button span {
+  position: relative;
+  right: 50%;
+}
+/* End Menu */
+
+/* =================== */
+
+/* Tasks */
+.tasks {
+  flex-basis: 56%;
+  background-color: #fcfcfc;
+  border-right: 0.3px solid rgb(219, 212, 212);
+}
+.tasks .title {
+  display: flex;
+  font-size: 2.025rem;
+  align-items: center;
+  padding: 3% 4% 2% 3%;
+}
+
+.tasks .title ion-icon {
+  font-size: 3.125rem;
+}
+
+.tasks .text {
+  padding: 0.4% 4% 2% 3%;
+  font-family: sans-serif;
+  color: #999999;
+}
+.tasks .text span {
+  background-color: #f4f5f7;
+  color: #2e4acd;
+  font-weight: 700;
+  padding: 1% 1.5%;
+  border-radius: 0.4rem;
+}
+.tasks .text p {
+  padding: 1%;
+}
+/* End Tasks */
+
+/* =================== */
+
+/* Team */
+
+.team {
+  flex-basis: 23%;
+  background-color: #fcfcfc;
+}
+
+/* Tasks Section */
+
+#tasks-section {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  position: relative;
+  top: 3%;
+  height: 100vh;
+}
+#tasks-section .column-header {
+  display: flex;
+  background-color: #f2f3f5;
+  border-radius: 0.3rem;
+  width: 13.5rem;
+  height: 1.875rem;
+  margin: -11% 0% 0% 5%;
+  align-items: center;
+}
+
+#tasks-section .column-header h3 {
+  font-weight: 500;
+  margin-left: 5%;
+}
+
+/* Tasks Cells */
+
+#tasks-section .cells-container {
+  height: 55%;
+  overflow-x: scroll;
+  position: relative;
+  top: 1%;
+}
+#tasks-section .cells-container::-webkit-scrollbar {
+  display: none;
+}
+#tasks-section .cell {
+  margin: 10px 12px;
+  height: 9.5rem;
+  width: 13.5rem;
+  border: 1px solid #999999;
+  border-style: dashed;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+  background-color: #fff;
+  padding: 10px 55px;
+  border-radius: 0.5rem;
+}
+
+/* #tasks-section .cell #cell-main {
+  position: relative;
+  height: 9.5rem;
+  width: 14.5rem;
+  right: 2%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  z-index: 1;
+
+} */
+#tasks-section .cell .cell-header {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 10%;
+}
+#tasks-section .cell .cell-header .icon {
+  background-color: #f4f5f7;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin: 3% 5%;
+  display: flex;
+  font-size: 1.1025rem;
+}
+
+#tasks-section .cell .icon ion-icon {
+  color: #ffcc41;
+  margin: auto;
+}
+#tasks-section .cell .cell-header .task-name {
+  font-size: 0.8rem;
+  margin: 10px;
+}
+#tasks-section .cell .cell-header .more {
+  margin: 5% 5%;
+}
+
+#tasks-section .cell .cell-header .more ion-icon {
+  color: #999999;
+}
+
+#tasks-section .cell .cell-body {
+  flex-basis: 60%;
+  display: flex;
+}
+
+#tasks-section .cell .cell-body p {
+  margin: 0% 4% 0% 4%;
+  width: 96%;
+  height: 12vh;
+  overflow-x: scroll;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.time-icon {
+  margin: 0% 6%;
+}
+
+#tasks-section .cell .cell-body p::-webkit-scrollbar {
+  display: none;
+}
+
+#tasks-section .cell .cell-footer {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#tasks-section .cell .cell-footer .date {
+  background-color: red;
+  width: 55.8%;
+  padding: 0px 0px;
+  margin: 1.7% 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+
+#tasks-section .cell .cell-footer .date ion-icon {
+  color: #fff;
+  display: flex;
+  margin: auto;
+  width: 15px;
+  height: 20px;
+}
+
+/* Add Tasks */
+
+.add-task {
+  border: 1px solid #999999;
+  border-style: dashed;
+  border-radius: 0.3rem;
+  width: 13.5rem;
+  height: 2.875rem;
+  margin: 0% 0% 0% 1%;
+  display: flex;
+  position: fixed;
+  bottom: 3%;
+  text-align: center;
+  cursor: pointer;
+}
+.add-task ion-icon {
+  margin: auto;
+}
+
+/* Add task popup */
+
+#add-task #popup {
+  position: absolute;
+  top: -150%;
+  /* top: 50%; */
+  left: 50%;
+  /* opacity: 0; */
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 60%;
+  height: 65vh;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+}
+
+#add-task #popup.active {
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+  z-index: 1;
+}
+
+#add-task #popup .container .close-btn {
+  position: absolute;
+  top: 1.875rem;
+  right: 0.625rem;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  color: #000;
+  font-size: 2.6875rem;
+  text-align: center;
+  line-height: 0.9375rem;
+  border-radius: 0.9375rem;
+  cursor: pointer;
+  z-index: 1;
+}
+#add-task #popup .container {
+  display: flex;
+}
+#add-task #popup .container .banner {
+  flex-basis: 35%;
+}
+#add-task #popup .container .banner img {
+  width: 130%;
+  position: relative;
+  right: 10%;
+}
+
+#add-task #popup .container .form {
+  flex-basis: 65%;
+}
+#add-task #popup form {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10%;
+  margin-left: 15%;
+}
+
+#add-task #popup .form h2 {
+  font-size: 3rem;
+  position: relative;
+  left: 15%;
+  top: 5%;
+}
+
+#add-task #popup form .left,
+form .right,
+form .description,
+form .btn {
+  display: flex;
+  width: 90%;
+}
+#add-task #popup form .left .name,
+form .left .date,
+form .right .owner,
+form .right .priority {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+#add-task #popup form .description .textarea {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 13px;
+  width: 93%;
+}
+
+#add-task #popup select,
+input {
+  width: 11.25rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  margin: 20px 0px;
+}
+
+#add-task #popup select.error {
+  border-bottom: 1px solid red;
+}
+form .right .priority select.error {
+  border-bottom: 1px solid red;
+}
+
+#add-task #popup form.error {
+  border-bottom: 1px solid red;
+}
+
+#add-task #popup textarea {
+  border: none;
+  border-bottom: 1px solid #000;
+}
+#add-task #popup textarea.error {
+  border-bottom: 1px solid red;
+}
+#add-task #popup .description label {
+  margin-bottom: 14px;
+}
+
+/* Button */
+
+#add-task #popup #add-task__btn {
+  padding: 10px 95px;
+  background-color: #d6a8d4;
+  border: none;
+  border-radius: 0.55rem;
+  position: relative;
+  margin-top: 20px;
+  right: -180px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#add-task #popup #add-task__btn:hover {
+  background-color: #fe9cc8;
+  transition: 0.5s;
+}
+
+/* =================== */
+
+/* Team */
+
+.team {
+  flex-basis: 23%;
+  background-color: #fcfcfc;
+  /* display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center; */
+}
+
+.team .members {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 15px;
+  align-items: center;
+}
+.team h2 {
+  font-size: 1.2rem;
+}
+
+.team .members a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.team .chat-header h2 {
+  margin: 30px 40px;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.team .chat-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team .chat-main li {
+  list-style-type: none;
+}
+.team .chat-main li.message-left {
+  width: 100%;
+  position: relative;
+  right: 15%;
+}
+
+.team .chat-main li.message-left p {
+  background-color: #f4f5f7;
+  padding: 15px 26px;
+  border-radius: 0.75rem;
+  border-bottom-left-radius: 0rem;
+}
+
+.team .chat-main li.message-right {
+  width: 100%;
+  position: relative;
+  left: 25%;
+  top: 25%;
+}
+
+.team .chat-main li.message-right p {
+  background-color: #2e4acd;
+  color: #fff;
+
+  padding: 15px 26px;
+  border-radius: 0.75rem;
+  border-bottom-left-radius: 0rem;
+}
+
+.team .chat-main li.message-right span {
+  width: 100%;
+  position: relative;
+  left: 60%;
+  top: 25%;
+}
+
+.team .chat-main form {
+  width: 22%;
+  position: fixed;
+  bottom: 3%;
+  display: flex;
+}
+
+.team .chat-main form input {
+  width: 80%;
+  background-color: #f4f5f7;
+  border: none;
+  padding: 20px 60px;
+  margin-right: 13px;
+  border-radius: 0.75rem;
+}
+
+.team .chat-main form button {
+  background: none;
+  border: none;
+}
+
+.team .chat-main form button::placeholder {
+  color: red;
+}
+
+/* Error */
+.error {
+  border-bottom: 1px solid red;
+  border-color: red;
+}
+/* =================== */
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.invisible {
+  display: none;
+}

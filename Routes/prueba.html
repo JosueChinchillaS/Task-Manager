@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../public/css/style.css" />
+
+    <title>Josué Chinchilla</title>
+  </head>
+  <body>
+    <section class="main">
+      <section class="menu">
+        <div class="account">
+          <div class="img">
+            <ion-icon name="person-outline"></ion-icon>
+          </div>
+          <div class="profile">
+            <h2>Josué Chinchilla</h2>
+          </div>
+        </div>
+
+        <div class="navigation"></div>
+        <div class="navigation-menu"></div>
+      </section>
+
+      <section class="tasks">
+        <div class="title">
+          <ion-icon name="checkmark-outline"></ion-icon>
+          <h1>Daily Tasks</h1>
+        </div>
+        <div class="text">
+          <p>
+            Click <span>+ New</span> To create new list and wait for task
+            manager card
+          </p>
+          <p>Don't Create a card by yourself to manage a good collaboration</p>
+        </div>
+
+        <div class="tasks-section">
+          <div class="column">
+            <div class="column-header">
+              <h3>Next Up</h3>
+            </div>
+
+            <div class="cells-container">
+              <div class="cell">
+                <!-- JavaScript -->
+                <div class="cell-main">
+                  <div class="cell-header">
+                    <div class="icon">
+                      <ion-icon name="hand-left-outline"></ion-icon>
+                    </div>
+                    <div class="task-name"><h2>Dishes</h2></div>
+                    <div class="more">
+                      <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                  </div>
+                  <div class="cell-body">
+                    <p id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam distinctio,</p>
+                  </div>
+                  <div class="cell-footer">
+                      <div class="date">
+                        <div class="time-icon"><ion-icon name="time-outline"></ion-icon></div>
+                        <div class="time"><p>Mar 24</p></div>
+                      </div>
+                  </div>
+                </div>
+                <!-- JavaScript -->
+              </div>
+
+              <div class="cell"></div>
+              <div class="cell"></div>
+            </div>
+
+
+
+            <div class="add-task" id="btn-add">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-header">
+              <h3>In Progress</h3>
+            </div>
+
+            <div class="cells-container">
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+            </div>
+
+            <div class="add-task" id="btn-add">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="column-header">
+              <h3>Completed</h3>
+            </div>
+
+            <div class="cells-container">
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+            </div>
+
+            <div class="add-task" id="btn-add">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team">
+        <h1>Daily Tasks</h1>
+      </section>
+    </section>
+
+    <section id="add-task">
+      <div id="popup">
+        <div class="container">
+          <div class="banner">
+            <img src="../img/illustration.png" alt="" />
+          </div>
+
+          <div class="close-btn">&times;</div>
+
+          <div class="form">
+            <h2>Add Task</h2>
+            <form action="">
+              <div class="left">
+                <div class="name">
+                  <label for="taskName">Task Name</label>
+                  <input
+                    type="text"
+                    name="taskName"
+                    id="task-name"
+                    placeholder="Do the dishes"
+                    required
+                  />
+                </div>
+
+                <div class="date">
+                  <label for="taskDate">Task Date</label>
+                  <input type="date" name="taskDate" id="task-date" required />
+                </div>
+              </div>
+
+              <div class="right">
+                <div class="owner">
+                  <label for="taskOwner">Task Owner</label>
+                  <select required name="taskOwner" id="task-owner">
+                    <option value="">Select the owner</option>
+                    <option value="1">Josué Chinchilla</option>
+                  </select>
+                </div>
+
+                <div class="priority">
+                  <label for="taskPriority">Task Priority</label>
+                  <select required name="taskPriority" id="task-priority">
+                    <option id="task-priority" value="" required>
+                      Select the priority
+                    </option>
+                    <option value="1">High</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Low</option>
+                  </select>
+                </div>
+              </div>
+              <div class="description">
+                <div class="textarea">
+                  <label for="taskDescription">Task Description</label>
+                  <textarea
+                    required
+                    name=""
+                    id="task-description"
+                    cols="30"
+                    rows=""
+                    placeholder="Write your description here..."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="btn">
+                <button id="add-task__btn">Add</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sweet Alert -->
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- JavaScript -->
+    <script src="../public/js/add-task.js"></script>
+  </body>
+</html>
